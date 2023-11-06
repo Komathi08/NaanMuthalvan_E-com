@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Sign Up Form</title>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+<link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+<!-- Main css -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a class="active" href="reg.html">Register</a></li>
+                <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <div class="back">
+        <div class="cod"></div>
+        <div class="container">
+            <h1 class="label">Login to your Account</h1>
+            <form class="login_form" method="post" name="form" onsubmit="return validated()">
+                <div class="font">Email</div>
+                <input autocomplte="off" type="text" name="email">
+                <div id="email_error">Please fill up your Email</div>
+                <div class="font font2">Password</div>
+                <input type="password" name="password"><br>
+                <div id="pass_error">Please fill up your Password</div>
+                <button type="submit">login</button>    
+            </form>
+            <div class="nolog">
+            <input type="checkbox" id="check">
+                    <lable for="check">Don't have account?<a href="reg.html"><u>Create an New account.</u></a></label>
+                    </div>
+            </div> 
+        </div>   
+    </section>
+    <script type="text/javascript">
+        {
+            var email=document.forms['form']['email'];
+            var password=document.forms['form']['password'];
+
+            var email_error=document.getElementById('email_error');
+            var pass_error=document.getElementById('pass_error');
+
+            email.addEventListener('textInput',email.Varify);
+            password.addEventListener('textInput',pass.Varify);
+        }
+            function validated(){
+                if(email.value.length<9){
+                    email.style.border="1px solid red";
+                    email_error.style.display="block";
+                    email.focus();
+                    return false;
+                }
+                if(password.value.length<6){
+                    password.style.border="1px solid red";
+                    pass_error.style.display="block";
+                    password.focus();
+                    return false;
+                }
+            
+            }
+            function email_Verify(){
+                if(email.value.length >= 8){
+                    email.style.border ="1px solid red";
+                    email_error.style.display ="block";
+                    return true;
+                }
+            }
+    </script>                      
+	
+</body>
+<!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
