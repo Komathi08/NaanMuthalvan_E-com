@@ -54,4 +54,6 @@
 
 ### Scalability and Reliability
 - *Redundancy:* Use redundant components (e.g., servers, databases) to ensure continuous operation in case of component failures.
-- *Fault Tolerance:* Design the system to handle hardware failures gracefully and recover without significant downtim
+- *Fault Tolerance:* Design the system to handle hardware failures gracefully and recover without significant downtime.
+### References 
+-  https://e-shopit.vercel.app/
